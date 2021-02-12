@@ -70,17 +70,24 @@ body {
   padding: 4rem 5rem;
 }
 
-.form-header {
+.form__header {
   text-align: center;
 }
 
-.form-title {
+.form__title {
   font-size: 4.5rem;
   font-weight: 400;
   margin-bottom: 3rem;
 }
 
-.form-description {
+@media (max-width: 576px) {
+  .form__title {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+}
+
+.form__description {
   font-size: 2.2rem;
   font-weight: 400;
   line-height: 1.6;
@@ -88,25 +95,38 @@ body {
   max-width: 80%;
 }
 
-.form-group {
+@media (max-width: 576px) {
+  .form__description {
+    font-size: 1.7rem;
+    line-height: 3rem;
+  }
+}
+
+.form__group {
   display: flex;
   flex-direction: column;
   margin: 0 auto 2.5rem auto;
 }
 
-.form-group select {
+.form__group select {
   appearance: none;
 }
 
-.form-group p,
-.form-label {
+.form__group p,
+.form__label {
   margin-bottom: 1rem;
+  margin-left: 1rem;
+  color: var(--color-primary-dark);
 }
 
-.form-field,
-.form-textarea,
-.form-submit {
-  color: var(--color-dark-2);
+.form__group p {
+  margin-top: 1rem;
+}
+
+.form__field,
+.form__textarea,
+.form__submit {
+  color: var(--color-dark-1);
   padding: 2rem 2.5rem;
   font-size: inherit;
   font-family: inherit;
@@ -116,35 +136,41 @@ body {
   transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.form-field:focus,
-.form-textarea:focus,
-.form-submit:focus {
+.form__field:focus,
+.form__textarea:focus,
+.form__submit:focus {
   border-color: transparent;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(185, 89, 89, 0.25);
 }
 
-.form-radios,
-.form-group-checkboxes {
+.form__radios,
+.form__group__checkboxes {
   margin-left: 1rem;
   display: grid;
   row-gap: 0.4rem;
 }
 
-.form-radios {
+.form__radios {
   grid-template-columns: 1fr;
 }
 
-.form-group-checkboxes {
+.form__group__checkboxes {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.form-textarea {
+.form__textarea {
   min-height: 12rem;
   resize: vertical;
 }
 
-.form-submit {
+.form__submit {
   background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+::selection {
+  background-color: var(--color-primary-light);
   color: var(--color-white);
 }

@@ -15,38 +15,38 @@
   <body>
     <div class="container">
       <form id="survey-form" class="form">
-        <header class="form-header" id="form-header">
-          <h1 id="title" class="form-title">
+        <header class="form__header" id="form-header">
+          <h1 id="title" class="form__title">
             Опрос
             <span class="logo-part-1">Cook</span
             ><span class="logo-part-2">It</span>
           </h1>
-          <p id="description" class="form-description">
+          <p id="description" class="form__description">
             Спасибо, что уделяете время и помогаете улучшить наш сервис!
           </p>
         </header>
-        <div class="form-group">
-          <label for="name" id="name-label" class="form-label">Имя</label>
+        <div class="form__group">
+          <label for="name" id="name-label" class="form__label">Имя</label>
           <input
             type="text"
             id="name"
-            class="form-field"
-            placeholder="Имя"
+            class="form__field"
+            placeholder="Александр"
             required
           />
         </div>
-        <div class="form-group">
-          <label for="email" id="email-label" class="form-label">Email</label>
+        <div class="form__group">
+          <label for="email" id="email-label" class="form__label">Email</label>
           <input
             type="email"
             id="email"
-            class="form-field"
-            placeholder="Email"
+            class="form__field"
+            placeholder="polozhenskii@gmail.com"
             required
           />
         </div>
-        <div class="form-group">
-          <label for="number" id="number-label" class="form-label"
+        <div class="form__group">
+          <label for="number" id="number-label" class="form__label"
             >Возраст <span class="clue">(не обязательно)</span></label
           >
           <input
@@ -54,13 +54,13 @@
             id="number"
             min="10"
             max="99"
-            class="form-field"
-            placeholder="Возраст (не обязательно)"
+            class="form__field"
+            placeholder="32"
           />
         </div>
-        <div class="form-group">
+        <div class="form__group">
           <p>Как часто Вы готовите?</p>
-          <select id="dropdown" name="frequency" class="form-field" required>
+          <select id="dropdown" name="frequency" class="form__field" required>
             <option disabled selected value>Выберите подходящий вариант</option>
             <option value="notAtAll">Не готовлю вообще</option>
             <option value="oddDays">Через день</option>
@@ -69,18 +69,18 @@
             <option value="allTheDay">Готовлю всегда (я повар)</option>
           </select>
         </div>
-        <div class="form-group">
+        <div class="form__group">
           <p>
             Порекомендовали бы Вы <span class="logo-part-1">Cook</span
             ><span class="logo-part-2">It</span> своим друзьям?
           </p>
-          <div class="form-radios">
+          <div class="form__radios">
             <label>
               <input
                 type="radio"
                 name="user-recommend"
                 value="definetely"
-                class="form-radio"
+                class="form__radio"
                 checked
               />
               Определенно
@@ -90,7 +90,7 @@
                 type="radio"
                 name="user-recommend"
                 value="maybe"
-                class="form-radio"
+                class="form__radio"
               />
               Может быть
             </label>
@@ -99,26 +99,26 @@
                 type="radio"
                 name="user-recommend"
                 value="definetely"
-                class="form-radio"
+                class="form__radio"
               />
               Вряд ли
             </label>
           </div>
         </div>
-        <div class="form-group">
+        <div class="form__group">
           <p>
             Что может быть улучшено на
             <span class="logo-part-1">Cook</span
             ><span class="logo-part-2">It</span>?
             <span class="clue">(Можно выбрать несколько вариантов)</span>
           </p>
-          <div class="form-group-checkboxes">
+          <div class="form__group__checkboxes">
             <label
               ><input
                 name="prefer"
                 type="checkbox"
                 value="recipes"
-                class="form-checkbox"
+                class="form__checkbox"
               />
               Рецепты</label
             >
@@ -127,7 +127,7 @@
                 name="prefer"
                 type="checkbox"
                 value="classes"
-                class="form-checkbox"
+                class="form__checkbox"
               />
               Мастер-классы</label
             >
@@ -136,7 +136,7 @@
                 name="prefer"
                 type="checkbox"
                 value="online"
-                class="form-checkbox"
+                class="form__checkbox"
               />
               Онлайн-курсы</label
             >
@@ -145,7 +145,7 @@
                 name="prefer"
                 type="checkbox"
                 value="news"
-                class="form-checkbox"
+                class="form__checkbox"
               />
               Новости</label
             >
@@ -154,7 +154,7 @@
                 name="prefer"
                 type="checkbox"
                 value="discuss"
-                class="form-checkbox"
+                class="form__checkbox"
               />
               Обсуждения</label
             >
@@ -163,23 +163,23 @@
                 name="prefer"
                 type="checkbox"
                 value="feedback"
-                class="form-checkbox"
+                class="form__checkbox"
               />
               Обратная связь</label
             >
           </div>
         </div>
-        <div class="form-group">
+        <div class="form__group">
           <p>Может у Вас есть предложения или пожелания?</p>
           <textarea
             id="comments"
-            class="form-textarea"
+            class="form__textarea"
             name="comment"
             placeholder="Оставьте здесь свой комментарий..."
           ></textarea>
         </div>
-        <div class="form-group">
-          <button type="submit" id="submit" class="form-submit">
+        <div class="form__group">
+          <button type="submit" id="submit" class="form__submit">
             Отправить
           </button>
         </div>
