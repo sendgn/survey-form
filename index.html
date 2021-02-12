@@ -4,52 +4,63 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale="1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Форма опроса</title>
   </head>
   <body>
     <div class="container">
-      <header>
-        <h1 id="title">CookIt</h1>
-        <p id="description">
-          Спасибо, что уделяете время и помогаете улучшить наш сервис
-        </p>
-      </header>
-      <form id="survey-form">
-        <div class="survey-form-group">
-          <label for="name" id="name-label">Имя</label>
+      <form id="survey-form" class="form">
+        <header class="form-header" id="form-header">
+          <h1 id="title" class="form-title">
+            Опрос
+            <span class="logo-part-1">Cook</span
+            ><span class="logo-part-2">It</span>
+          </h1>
+          <p id="description" class="form-description">
+            Спасибо, что уделяете время и помогаете улучшить наш сервис!
+          </p>
+        </header>
+        <div class="form-group">
+          <label for="name" id="name-label" class="form-label">Имя</label>
           <input
             type="text"
             id="name"
-            class="survey-form-field"
+            class="form-field"
             placeholder="Имя"
             required
           />
         </div>
-        <div class="survey-form-group">
-          <label for="email" id="email-label">Email</label>
+        <div class="form-group">
+          <label for="email" id="email-label" class="form-label">Email</label>
           <input
             type="email"
             id="email"
-            class="survey-form-field"
+            class="form-field"
             placeholder="Email"
             required
           />
         </div>
-        <div class="survey-form-group">
-          <label for="number" id="number-label"
+        <div class="form-group">
+          <label for="number" id="number-label" class="form-label"
             >Возраст <span class="clue">(не обязательно)</span></label
           >
-          <input type="number" id="number" min="10" max="99" required />
+          <input
+            type="number"
+            id="number"
+            min="10"
+            max="99"
+            class="form-field"
+            placeholder="Возраст (не обязательно)"
+          />
         </div>
-        <div class="survey-form-group">
+        <div class="form-group">
           <p>Как часто Вы готовите?</p>
-          <select
-            id="dropdown"
-            name="frequency"
-            class="survey-form-field"
-            required
-          >
+          <select id="dropdown" name="frequency" class="form-field" required>
             <option disabled selected value>Выберите подходящий вариант</option>
             <option value="notAtAll">Не готовлю вообще</option>
             <option value="oddDays">Через день</option>
@@ -58,103 +69,117 @@
             <option value="allTheDay">Готовлю всегда (я повар)</option>
           </select>
         </div>
-        <div class="survey-form-group">
-          <p>Порекомендовали бы Вы CookIt своим друзьям?</p>
-          <label>
-            <input
-              type="radio"
-              name="user-recommend"
-              value="definetely"
-              class="survey-form-radio"
-              checked
-            />
-            Определенно
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="user-recommend"
-              value="maybe"
-              class="survey-form-radio"
-            />
-            Может быть
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="user-recommend"
-              value="definetely"
-              class="survey-form-radio"
-            />
-            Вряд ли
-          </label>
-        </div>
-        <div class="survey-form-group">
+        <div class="form-group">
           <p>
-            Что может быть улучшено на CookIt?
+            Порекомендовали бы Вы <span class="logo-part-1">Cook</span
+            ><span class="logo-part-2">It</span> своим друзьям?
+          </p>
+          <div class="form-radios">
+            <label>
+              <input
+                type="radio"
+                name="user-recommend"
+                value="definetely"
+                class="form-radio"
+                checked
+              />
+              Определенно
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="user-recommend"
+                value="maybe"
+                class="form-radio"
+              />
+              Может быть
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="user-recommend"
+                value="definetely"
+                class="form-radio"
+              />
+              Вряд ли
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <p>
+            Что может быть улучшено на
+            <span class="logo-part-1">Cook</span
+            ><span class="logo-part-2">It</span>?
             <span class="clue">(Можно выбрать несколько вариантов)</span>
           </p>
-          <label
-            ><input
-              name="prefer"
-              type="checkbox"
-              value="recipes"
-              class="survey-form-checkbox"
-            />Рецепты</label
-          >
-          <label
-            ><input
-              name="prefer"
-              type="checkbox"
-              value="classes"
-              class="survey-form-checkbox"
-            />Мастер-классы</label
-          >
-          <label
-            ><input
-              name="prefer"
-              type="checkbox"
-              value="online"
-              class="survey-form-checkbox"
-            />Онлайн-курсы</label
-          >
-          <label
-            ><input
-              name="prefer"
-              type="checkbox"
-              value="news"
-              class="survey-form-checkbox"
-            />Новости</label
-          >
-          <label
-            ><input
-              name="prefer"
-              type="checkbox"
-              value="discuss"
-              class="survey-form-checkbox"
-            />Обсуждения</label
-          >
-          <label
-            ><input
-              name="prefer"
-              type="checkbox"
-              value="feedback"
-              class="survey-form-checkbox"
-            />Обратная связь</label
-          >
+          <div class="form-group-checkboxes">
+            <label
+              ><input
+                name="prefer"
+                type="checkbox"
+                value="recipes"
+                class="form-checkbox"
+              />
+              Рецепты</label
+            >
+            <label
+              ><input
+                name="prefer"
+                type="checkbox"
+                value="classes"
+                class="form-checkbox"
+              />
+              Мастер-классы</label
+            >
+            <label
+              ><input
+                name="prefer"
+                type="checkbox"
+                value="online"
+                class="form-checkbox"
+              />
+              Онлайн-курсы</label
+            >
+            <label
+              ><input
+                name="prefer"
+                type="checkbox"
+                value="news"
+                class="form-checkbox"
+              />
+              Новости</label
+            >
+            <label
+              ><input
+                name="prefer"
+                type="checkbox"
+                value="discuss"
+                class="form-checkbox"
+              />
+              Обсуждения</label
+            >
+            <label
+              ><input
+                name="prefer"
+                type="checkbox"
+                value="feedback"
+                class="form-checkbox"
+              />
+              Обратная связь</label
+            >
+          </div>
         </div>
-        <div class="survey-form-group">
+        <div class="form-group">
           <p>Может у Вас есть предложения или пожелания?</p>
-          <input
-            type="textarea"
+          <textarea
             id="comments"
-            class="survey-form-textarea"
+            class="form-textarea"
             name="comment"
             placeholder="Оставьте здесь свой комментарий..."
-          />
+          ></textarea>
         </div>
-        <div class="survey-form-group">
-          <button type="submit" id="submit" class="survey-form-submit">
+        <div class="form-group">
+          <button type="submit" id="submit" class="form-submit">
             Отправить
           </button>
         </div>

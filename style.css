@@ -1,0 +1,150 @@
+:root {
+  --color-white: #f1f1f1;
+  --color-dark-1: #333;
+  --color-dark-2: #747474;
+  --color-dark-3: #d4d4d4;
+  --color-primary-light: #c88387;
+  --color-primary-dark: #b95959;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  background: linear-gradient(
+    -45deg,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
+  color: var(--color-dark-1);
+}
+
+.logo-part-1 {
+  color: var(--color-primary-dark);
+  font-weight: 600;
+}
+.logo-part-2 {
+  color: var(--color-dark-1);
+  font-weight: 500;
+}
+
+.container {
+  width: 100%;
+  margin: 6rem auto;
+  background-color: var(--color-white);
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 54rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 72rem;
+  }
+}
+
+.clue {
+  font-size: 1.3rem;
+}
+
+.form {
+  padding: 4rem 5rem;
+}
+
+.form-header {
+  text-align: center;
+}
+
+.form-title {
+  font-size: 4.5rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+.form-description {
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0 auto 3rem auto;
+  max-width: 80%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 2.5rem auto;
+}
+
+.form-group select {
+  appearance: none;
+}
+
+.form-group p,
+.form-label {
+  margin-bottom: 1rem;
+}
+
+.form-field,
+.form-textarea,
+.form-submit {
+  color: var(--color-dark-2);
+  padding: 2rem 2.5rem;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  border: 1px solid var(--color-dark-3);
+  border-radius: 1.5rem;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-field:focus,
+.form-textarea:focus,
+.form-submit:focus {
+  border-color: transparent;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(185, 89, 89, 0.25);
+}
+
+.form-radios,
+.form-group-checkboxes {
+  margin-left: 1rem;
+  display: grid;
+  row-gap: 0.4rem;
+}
+
+.form-radios {
+  grid-template-columns: 1fr;
+}
+
+.form-group-checkboxes {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.form-textarea {
+  min-height: 12rem;
+  resize: vertical;
+}
+
+.form-submit {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+}
