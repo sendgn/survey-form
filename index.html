@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale="1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Форма опроса</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">CookIt</h1>
+      <p id="description">
+        Спасибо, что уделяете время и помогаете улучшить наш сервис
+      </p>
+    </header>
+    <form id="survey-form">
+      <div class="survey-form-group">
+        <label for="name" id="name-label">Имя</label>
+        <input
+          type="text"
+          id="name"
+          class="survey-form-field"
+          placeholder="Имя"
+          required
+        />
+      </div>
+      <div class="survey-form-group">
+        <label for="email" id="email-label">Email</label>
+        <input
+          type="email"
+          id="email"
+          class="survey-form-field"
+          placeholder="Email"
+          required
+        />
+      </div>
+      <div class="survey-form-group">
+        <label for="number" id="number-label"
+          >Возраст <span class="clue">(не обязательно)</span></label
+        >
+        <input type="number" id="number" min="10" max="99" required />
+      </div>
+      <div class="survey-form-group">
+        <p>Как часто Вы готовите?</p>
+        <select
+          id="dropdown"
+          name="frequency"
+          class="survey-form-field"
+          required
+        >
+          <option disabled selected value>Выберите подходящий вариант</option>
+          <option value="notAtAll">Не готовлю вообще</option>
+          <option value="oddDays">Через день</option>
+          <option value="everyday">Каждый день</option>
+          <option value="fewPerDay">Несколько раз в день</option>
+          <option value="allTheDay">Готовлю всегда (я повар)</option>
+        </select>
+      </div>
+      <div class="survey-form-group">
+        <p>Порекомендовали бы Вы CookIt своим друзьям?</p>
+        <label>
+          <input
+            type="radio"
+            name="user-recommend"
+            value="definetely"
+            class="survey-form-radio"
+            checked
+          />
+          Определенно
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="user-recommend"
+            value="maybe"
+            class="survey-form-radio"
+          />
+          Может быть
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="user-recommend"
+            value="definetely"
+            class="survey-form-radio"
+          />
+          Вряд ли
+        </label>
+      </div>
+      <div class="survey-form-group">
+        <p>
+          Что может быть улучшено на CookIt?
+          <span class="clue">(Можно выбрать несколько вариантов)</span>
+        </p>
+        <label
+          ><input
+            name="prefer"
+            type="checkbox"
+            value="recipes"
+            class="survey-form-checkbox"
+          />Рецепты</label
+        >
+        <label
+          ><input
+            name="prefer"
+            type="checkbox"
+            value="classes"
+            class="survey-form-checkbox"
+          />Мастер-классы</label
+        >
+        <label
+          ><input
+            name="prefer"
+            type="checkbox"
+            value="online"
+            class="survey-form-checkbox"
+          />Онлайн-курсы</label
+        >
+        <label
+          ><input
+            name="prefer"
+            type="checkbox"
+            value="news"
+            class="survey-form-checkbox"
+          />Новости</label
+        >
+        <label
+          ><input
+            name="prefer"
+            type="checkbox"
+            value="discuss"
+            class="survey-form-checkbox"
+          />Обсуждения</label
+        >
+        <label
+          ><input
+            name="prefer"
+            type="checkbox"
+            value="feedback"
+            class="survey-form-checkbox"
+          />Обратная связь</label
+        >
+      </div>
+      <div class="survey-form-group">
+        <p>Может у Вас есть предложения или пожелания?</p>
+        <input
+          type="textarea"
+          id="comments"
+          class="survey-form-textarea"
+          name="comment"
+          placeholder="Оставьте здесь свой комментарий..."
+        />
+      </div>
+      <div class="survey-form-group">
+        <button type="submit" id="submit" class="survey-form-submit">
+          Отправить
+        </button>
+      </div>
+    </form>
+  </body>
+</html>
